@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    /* 基本选项 */
+    "target": "ESNext",              // 编译到最新的 ECMAScript 版本
+    "module": "ESNext",              // 使用最新的模块系统
+    "lib": ["DOM", "ESNext"],        // 包括 DOM 和最新 JS 的类型定义
+    "allowJs": true,                 // 允许编译 JS 文件 (方便逐步迁移)
+    "sourceMap": true,               // 生成 source map，方便调试
+    "outDir": "./dist",              // (仅供参考，webpack会覆盖) 输出目录
+    "rootDir": "./src",              // 指定源码根目录
+
+    /* 严格类型检查选项 */
+    "strict": true,                  // 启用所有严格类型检查选项
+    "noImplicitAny": true,           // 在表达式和声明上有隐含的 'any' 类型时报错
+
+    /* 模块解析选项 */
+    "moduleResolution": "node",      // 使用 Node.js 的模块解析策略
+    "esModuleInterop": true,         // 允许 commonjs 和 es module 混用
+    "resolveJsonModule": true,       // 允许导入 .json 文件
+
+    /* 高级选项 */
+    "skipLibCheck": true,            // 跳过声明文件的类型检查
+    "forceConsistentCasingInFileNames": true // 强制文件名大小写一致
+  },
+  "include": [
+    "src/**/*" // 只编译 src 目录下的文件
+  ]
+}
