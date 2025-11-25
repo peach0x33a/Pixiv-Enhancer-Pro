@@ -1,6 +1,6 @@
 {
   "name": "pixiv-enhancer-pro",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Pixiv 体验增强 ",
   "main": "src/index.js",
   "scripts": {
