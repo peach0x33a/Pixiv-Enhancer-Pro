@@ -37,11 +37,19 @@ module.exports = {
                 description: pkg.description,
                 match: '*://www.pixiv.net/*',
                 // 4. 为 GM_addStyle 添加授权
-                grant: 'GM_addStyle'
+                grant: [
+                    'GM_addStyle',
+                    'GM_download',
+                    'GM_getValue',
+                    'GM_setValue'
+                ]
             }
         }),
         new webpack.DefinePlugin({
             'SCRIPT_VERSION': JSON.stringify(pkg.version)
         })
-    ]
+    ],
+   externals: [
+        /^GM_.*$/
+   ]
 };
